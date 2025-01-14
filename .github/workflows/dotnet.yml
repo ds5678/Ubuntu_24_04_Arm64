@@ -18,11 +18,11 @@ jobs:
       - name: Print Mirror File Contents
         run: cat /etc/apt/apt-mirrors.txt
 
-      - name: Modify Mirror File Contents
-        run: sudo echo -e "\nhttp://ports.ubuntu.com/ubuntu-ports/\tPriority:4" >> /etc/apt/apt-mirrors.txt
+      - name: Modify Source File Contents
+        run: sudo echo -e "\n#Test" >> /etc/apt/sources.list.d/ubuntu.sources
 
-      - name: Print Mirror File Contents Again
-        run: cat /etc/apt/apt-mirrors.txt
+      - name: Print Source File Contents Again
+        run: cat /etc/apt/sources.list.d/ubuntu.sources
 
       # https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/cross-compile#linux
       - name: Install Arm64 Dependencies
