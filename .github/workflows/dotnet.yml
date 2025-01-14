@@ -19,7 +19,7 @@ jobs:
         run: cat /etc/apt/apt-mirrors.txt
 
       - name: Modify Mirror File Contents
-        run: echo -e "\nhttp://ports.ubuntu.com/ubuntu-ports/\tPriority:4" >> /etc/apt/apt-mirrors.txt
+        run: sudo echo -e "\nhttp://ports.ubuntu.com/ubuntu-ports/\tPriority:4" >> /etc/apt/apt-mirrors.txt
 
       - name: Print Mirror File Contents Again
         run: cat /etc/apt/apt-mirrors.txt
